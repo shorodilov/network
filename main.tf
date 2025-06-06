@@ -9,7 +9,8 @@ terraform {
   cloud {
     organization = "shorodilov"
     workspaces {
-      name = "network"
+      project = "local"
+      name    = "network"
     }
   }
 }
