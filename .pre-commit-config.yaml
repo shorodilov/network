@@ -1,0 +1,58 @@
+# Pre-commit Configuration for Code Quality Management
+# =================================================
+#
+# This configuration establishes automated code quality checks that run
+# at different git hook stages.
+# It ensures a consistent code style, identifies potential security
+# issues, and maintains high code quality standards across the project.
+#
+# Installation and Usage
+# ---------------------
+# 1. Install pre-commit in your development environment:
+#    pip install pre-commit
+#
+# 2. Install the git hooks:
+#    pre-commit install
+#
+# 3. To run all checks manually:
+#    pre-commit run --all-files
+
+# Default hook types installed by 'pre-commit install'
+default_install_hook_types:
+  - pre-commit
+
+# Specify the Python version for consistency across a team
+default_language_version:
+  python: python3.12
+
+repos:
+  # Standard Pre-commit Hooks
+  # ------------------------
+  # These hooks provide basic file and code quality checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # File Quality Checks
+      - id: check-added-large-files
+        stages: [ pre-commit ]
+      - id: check-case-conflict
+        stages: [ pre-commit ]
+      - id: check-toml
+        stages: [ pre-commit ]
+
+      # Security Checks
+      - id: debug-statements
+        stages: [ pre-commit ]
+
+      # File Formatting
+      - id: end-of-file-fixer
+        stages: [ pre-commit ]
+        require_serial: true
+      - id: mixed-line-ending
+        args: [ "--fix=lf" ]  # Enforces Linux-style line endings
+        stages: [ pre-commit ]
+
+      # Whitespace Management
+      - id: trailing-whitespace
+        args: [ "--markdown-linebreak-ext=md" ]
+        stages: [ pre-commit ]
