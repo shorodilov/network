@@ -6,10 +6,6 @@ labels: enhancement
 assignees: "shorodilov"
 ---
 
-# Feature Request
-
-## Description
-
 [Provide a clear and concise description of the feature you're requesting]
 
 ## Problem Statement

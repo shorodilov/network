@@ -6,9 +6,6 @@ labels: enhancement
 assignees: "shorodilov"
 ---
 
-# Implementation Task
-
-## Description
 [Provide a clear and concise description of the task]
 
 ## Tasks

@@ -6,9 +6,6 @@ labels: bug
 assignees: ""
 ---
 
-# Bug Report
-
-## Description
 [Provide a clear and concise description of the bug]
 
 ## Steps to Reproduce
