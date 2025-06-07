@@ -21,43 +21,10 @@ variable "password" {
 }
 
 # Networks settings
-variable "home_vlan_id" {
-  type = number
-}
-variable "home_vlan_name" {
-  type    = string
-  default = "home"
-}
-variable "home_vlan_purpose" {
-  type    = string
-  default = "corporate"
-}
-variable "home_vlan_subnet" {
+variable "wlan_home_ssid" {
   type = string
 }
-variable "home_vlan_dhcp_enabled" {
-  type    = bool
-  default = false
-}
-variable "home_vlan_dhcp_start" {
-  type     = string
-  nullable = true
-  default  = null
-}
-variable "home_vlan_dhcp_stop" {
-  type     = string
-  nullable = true
-  default  = null
-}
-variable "home_vlan_dhcp_lease" {
-  type     = number
-  nullable = true
-  default  = null
-}
-variable "home_wlan_ssid" {
-  type = string
-}
-variable "home_wlan_passphrase" {
+variable "wlan_home_passphrase" {
   type      = string
   sensitive = true
 }
