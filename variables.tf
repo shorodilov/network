@@ -21,10 +21,11 @@ variable "password" {
 }
 
 # Networks settings
-variable "wlan_home_ssid" {
-  type = string
-}
 variable "wlan_home_passphrase" {
+  type      = string
+  sensitive = true
+}
+variable "wlan_work_passphrase" {
   type      = string
   sensitive = true
 }
