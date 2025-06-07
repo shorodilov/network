@@ -54,3 +54,10 @@ variable "home_vlan_dhcp_lease" {
   nullable = true
   default  = null
 }
+variable "home_wlan_ssid" {
+  type = string
+}
+variable "home_wlan_passphrase" {
+  type      = string
+  sensitive = true
+}
