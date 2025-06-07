@@ -1,6 +1,6 @@
-module "lan_home" {
+module "vlan_home" {
   providers    = { unifi = unifi }
-  source       = "./modules/vlan"
+  source       = "../modules/vlan"
   name         = "home"
   subnet       = "192.168.10.0/24"
   vlan_id      = 10
@@ -9,9 +9,9 @@ module "lan_home" {
   dhcp_stop    = "192.168.10.199"
 }
 
-module "lan_work" {
+module "vlan_work" {
   providers    = { unifi = unifi }
-  source       = "./modules/vlan"
+  source       = "../modules/vlan"
   name         = "work"
   subnet       = "192.168.20.0/24"
   vlan_id      = 20

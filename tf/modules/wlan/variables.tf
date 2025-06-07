@@ -5,7 +5,10 @@ variable "name" {
 
 variable "passphrase" {
   description = "Wi-Fi network password"
+  sensitive   = true
   type        = string
+  nullable    = true
+  default     = null
 }
 
 variable "network_id" {
